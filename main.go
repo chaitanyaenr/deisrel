@@ -39,6 +39,10 @@ func main() {
 			},
 		},
 		cli.Command{
+			Name: "generate-changelog",
+			Action: actions.GenerateChangelog(ghClient, os.Stdout),
+		},
+		cli.Command{
 			Name: "helm-params",
 			Flags: []cli.Flag{
 				cli.StringFlag{
